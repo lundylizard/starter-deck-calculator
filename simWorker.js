@@ -1,4 +1,3 @@
-// simWorker.js
 self.onmessage = function (e) {
     const { cardsData, requirements, trials } = e.data;
     const typeNameToId = {

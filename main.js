@@ -1,4 +1,3 @@
-// --- Type ID Maps ---
 const typeNameToId = {
     dragon: 1, spellcaster: 2, zombie: 3, warrior: 4,
     beastwarrior: 5, beast: 6, wingedbeast: 7, fiend: 8,
@@ -13,13 +12,11 @@ const idToTypeName = Object.fromEntries(
     Object.entries(typeNameToId).map(([k, v]) => [v, k])
 );
 
-// --- In-Memory State ---
 let cardsData = [];
 let nameToId = {}, nameToIdNormalized = {};
 let typesList = Object.keys(typeNameToId);
 let defaultCardAlternatives = [], equipCardIds = [], magicCardIds = [];
 
-// --- Cookie Utilities ---
 function setCookie(name, value, days = 365) {
     const expires = new Date(Date.now() + days * 864e5).toUTCString();
     document.cookie = `${name}=${encodeURIComponent(value)};expires=${expires};path=/`;
@@ -32,7 +29,6 @@ function getCookie(name) {
     }, '');
 }
 
-// --- Data Initialization ---
 async function loadCardData() {
     const res = await fetch('assets/cards_data.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -64,7 +60,6 @@ function populateCardDatalist() {
     });
 }
 
-// --- Utility Functions ---
 function resolveCardName(input) {
     const key = input.trim().toLowerCase();
     if (!key) return null;
@@ -249,7 +244,6 @@ function getRawReqs() {
     });
 }
 
-// --- UI Event Handlers ---
 document.addEventListener('DOMContentLoaded', async () => {
     const addBtn = document.getElementById('addRequirement');
     const runBtn = document.getElementById('runSim');
@@ -260,7 +254,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const output = document.getElementById('output');
 
     function updateLagWarning() {
-        lagWarning.classList.toggle('hidden', (parseInt(trialInput.value, 10) || 0) <= 100_000);
+        lagWarning.classList.toggle('hidden', (parseInt(trialInput.value, 10) || 0) <= 10000000);
     }
 
     trialInput.addEventListener('input', updateLagWarning);
@@ -297,13 +291,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     function buildSummary(reqs) {
-        let html = '<strong>The deck should have:</strong><ul>';
-        reqs.forEach(r => {
-            const items = r.altsRaw.map(v => r.kind === 'card' ? (resolveCardName(v) ? cardsData.find(c => c.id === resolveCardName(v)).name : v) : v).join(' or ');
-            html += r.min === r.max
-                ? `<li>${r.min} of <em>${items}</em></li>`
-                : `<li>between ${r.min} and ${r.max} of <em>${items}</em></li>`;
-        });
-        return html + '</ul>';
+        const itemsList = reqs.map(r => {
+            const kind = r.kind;
+            const alts = r.altsRaw.map(v =>
+                kind === 'card' ? cardsData.find(c => c.id === resolveCardName(v))?.name || v : v
+            ).join(' or ');
+            const label = r.min === r.max ? `${r.min}` : `between ${r.min} and ${r.max}`;
+            return `<li>${label} of <em>${alts}</em></li>`;
+        }).join('');
+        return `<strong>The deck should have:</strong><ul>${itemsList}</ul>`;
     }
 });

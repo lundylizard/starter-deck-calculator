@@ -1,0 +1,2417 @@
+[
+  {
+    "card_id": 9,
+    "name": "Shadow Specter",
+    "type": "zombie",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.0033482142857142855
+  },
+  {
+    "card_id": 24,
+    "name": "Skull Servant",
+    "type": "zombie",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.006696428571428571
+  },
+  {
+    "card_id": 58,
+    "name": "Kuriboh",
+    "type": "fiend",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.010044642857142856
+  },
+  {
+    "card_id": 105,
+    "name": "Tomozaurus",
+    "type": "dinosaur",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.013392857142857142
+  },
+  {
+    "card_id": 123,
+    "name": "Dark Plant",
+    "type": "plant",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.016741071428571428
+  },
+  {
+    "card_id": 130,
+    "name": "Weather Control",
+    "type": "fairy",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.020089285714285712
+  },
+  {
+    "card_id": 137,
+    "name": "Mystery Hand",
+    "type": "fiend",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.023437499999999997
+  },
+  {
+    "card_id": 167,
+    "name": "Ancient Jar",
+    "type": "rock",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.02678571428571428
+  },
+  {
+    "card_id": 192,
+    "name": "Key Mace",
+    "type": "fairy",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.030133928571428565
+  },
+  {
+    "card_id": 197,
+    "name": "Mech Mole Zombie",
+    "type": "zombie",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.03348214285714285
+  },
+  {
+    "card_id": 202,
+    "name": "Air Marmot of Nefariousness",
+    "type": "beast",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.03683035714285714
+  },
+  {
+    "card_id": 237,
+    "name": "Haniwa",
+    "type": "rock",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.040178571428571425
+  },
+  {
+    "card_id": 289,
+    "name": "Change Slime",
+    "type": "aqua",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.04352678571428571
+  },
+  {
+    "card_id": 387,
+    "name": "Mystic Lamp",
+    "type": "spellcaster",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.046875
+  },
+  {
+    "card_id": 393,
+    "name": "Zone Eater",
+    "type": "aqua",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.05022321428571429
+  },
+  {
+    "card_id": 394,
+    "name": "Steel Scorpion",
+    "type": "machine",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.053571428571428575
+  },
+  {
+    "card_id": 395,
+    "name": "Dancing Elf",
+    "type": "fairy",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.05691964285714286
+  },
+  {
+    "card_id": 397,
+    "name": "Leghul",
+    "type": "insect",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.06026785714285715
+  },
+  {
+    "card_id": 398,
+    "name": "Ooguchi",
+    "type": "aqua",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.06361607142857144
+  },
+  {
+    "card_id": 399,
+    "name": "Swordsman from a Foreign Land",
+    "type": "warrior",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.06696428571428573
+  },
+  {
+    "card_id": 402,
+    "name": "Monster Eye",
+    "type": "fiend",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.07031250000000001
+  },
+  {
+    "card_id": 410,
+    "name": "Mechanical Spider",
+    "type": "machine",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.0736607142857143
+  },
+  {
+    "card_id": 411,
+    "name": "Bat",
+    "type": "machine",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.07700892857142859
+  },
+  {
+    "card_id": 422,
+    "name": "Jinzo #7",
+    "type": "machine",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.08035714285714288
+  },
+  {
+    "card_id": 436,
+    "name": "White Dolphin",
+    "type": "fish",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.08370535714285716
+  },
+  {
+    "card_id": 444,
+    "name": "Turu-Purun",
+    "type": "aqua",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.08705357142857145
+  },
+  {
+    "card_id": 469,
+    "name": "Armed Ninja",
+    "type": "warrior",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.09040178571428574
+  },
+  {
+    "card_id": 475,
+    "name": "Sinister Serpent",
+    "type": "reptile",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.09375000000000003
+  },
+  {
+    "card_id": 484,
+    "name": "Ameba",
+    "type": "aqua",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.09709821428571432
+  },
+  {
+    "card_id": 485,
+    "name": "Korogashi",
+    "type": "insect",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.1004464285714286
+  },
+  {
+    "card_id": 488,
+    "name": "Rainbow Flower",
+    "type": "plant",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.10379464285714289
+  },
+  {
+    "card_id": 501,
+    "name": "Man-eater Bug",
+    "type": "insect",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.10714285714285718
+  },
+  {
+    "card_id": 504,
+    "name": "Fungi of the Musk",
+    "type": "fiend",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.11049107142857147
+  },
+  {
+    "card_id": 516,
+    "name": "Muka Muka",
+    "type": "rock",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.11383928571428575
+  },
+  {
+    "card_id": 524,
+    "name": "Star Boy",
+    "type": "aqua",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.11718750000000004
+  },
+  {
+    "card_id": 527,
+    "name": "Milus Radiant",
+    "type": "beast",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.12053571428571433
+  },
+  {
+    "card_id": 547,
+    "name": "Griggle",
+    "type": "plant",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.12388392857142862
+  },
+  {
+    "card_id": 548,
+    "name": "Bone Mouse",
+    "type": "zombie",
+    "drop_rate": 0.0033482142857142855,
+    "cdf": 0.1272321428571429
+  },
+  {
+    "card_id": 558,
+    "name": "Pot the Trick",
+    "type": "rock",
+    "drop_rate": 0.00390625,
+    "cdf": 0.1311383928571429
+  },
+  {
+    "card_id": 563,
+    "name": "Wretched Ghost of the Attic",
+    "type": "fiend",
+    "drop_rate": 0.00390625,
+    "cdf": 0.1350446428571429
+  },
+  {
+    "card_id": 635,
+    "name": "Queen's Double",
+    "type": "warrior",
+    "drop_rate": 0.00390625,
+    "cdf": 0.1389508928571429
+  },
+  {
+    "card_id": 644,
+    "name": "Flame Viper",
+    "type": "pyro",
+    "drop_rate": 0.00390625,
+    "cdf": 0.1428571428571429
+  },
+  {
+    "card_id": 5,
+    "name": "Ryu-kishin",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.14453125000000006
+  },
+  {
+    "card_id": 8,
+    "name": "Mushroom Man",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.1462053571428572
+  },
+  {
+    "card_id": 50,
+    "name": "Basic Insect",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.14787946428571436
+  },
+  {
+    "card_id": 75,
+    "name": "Man-eating Plant",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.1495535714285715
+  },
+  {
+    "card_id": 101,
+    "name": "Wings of Wicked Flame",
+    "type": "pyro",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.15122767857142866
+  },
+  {
+    "card_id": 102,
+    "name": "Mask of Darkness",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.1529017857142858
+  },
+  {
+    "card_id": 104,
+    "name": "Curtain of the Dark Ones",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.15457589285714296
+  },
+  {
+    "card_id": 107,
+    "name": "Kageningen",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.1562500000000001
+  },
+  {
+    "card_id": 122,
+    "name": "Yamatano Dragon Scroll",
+    "type": "dragon",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.15792410714285726
+  },
+  {
+    "card_id": 129,
+    "name": "Nemuriko",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.1595982142857144
+  },
+  {
+    "card_id": 134,
+    "name": "Mystical Capture Chain",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.16127232142857156
+  },
+  {
+    "card_id": 135,
+    "name": "Fiend's Hand",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.16294642857142871
+  },
+  {
+    "card_id": 145,
+    "name": "The Bewitching Phantom Thief",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.16462053571428586
+  },
+  {
+    "card_id": 148,
+    "name": "The Shadow Who Controls the Dark",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.16629464285714302
+  },
+  {
+    "card_id": 152,
+    "name": "The Melting Red Shadow",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.16796875000000017
+  },
+  {
+    "card_id": 154,
+    "name": "Fire Reaper",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.16964285714285732
+  },
+  {
+    "card_id": 156,
+    "name": "Hard Armor",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.17131696428571447
+  },
+  {
+    "card_id": 157,
+    "name": "Firegrass",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.17299107142857162
+  },
+  {
+    "card_id": 158,
+    "name": "Man Eater",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.17466517857142877
+  },
+  {
+    "card_id": 159,
+    "name": "Dig Beak",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.17633928571428592
+  },
+  {
+    "card_id": 160,
+    "name": "M-warrior #1",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.17801339285714307
+  },
+  {
+    "card_id": 161,
+    "name": "M-warrior #2",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.17968750000000022
+  },
+  {
+    "card_id": 174,
+    "name": "Hurricail",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.18136160714285737
+  },
+  {
+    "card_id": 176,
+    "name": "Fire Eye",
+    "type": "pyro",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.18303571428571452
+  },
+  {
+    "card_id": 179,
+    "name": "Phantom Dewan",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.18470982142857167
+  },
+  {
+    "card_id": 182,
+    "name": "Masked Clown",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.18638392857142883
+  },
+  {
+    "card_id": 183,
+    "name": "Lucky Trinket",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.18805803571428598
+  },
+  {
+    "card_id": 184,
+    "name": "Genin",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.18973214285714313
+  },
+  {
+    "card_id": 185,
+    "name": "Eyearmor",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.19140625000000028
+  },
+  {
+    "card_id": 187,
+    "name": "Gate Deeg",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.19308035714285743
+  },
+  {
+    "card_id": 191,
+    "name": "LaLa Li-oon",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.19475446428571458
+  },
+  {
+    "card_id": 195,
+    "name": "Doron",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.19642857142857173
+  },
+  {
+    "card_id": 198,
+    "name": "Happy Lover",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.19810267857142888
+  },
+  {
+    "card_id": 200,
+    "name": "Petit Dragon",
+    "type": "dragon",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.19977678571428603
+  },
+  {
+    "card_id": 203,
+    "name": "Phantom Ghost",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.20145089285714318
+  },
+  {
+    "card_id": 207,
+    "name": "Droll Bird",
+    "type": "wingedbeast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.20312500000000033
+  },
+  {
+    "card_id": 208,
+    "name": "Petit Angel",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.20479910714285748
+  },
+  {
+    "card_id": 209,
+    "name": "Winged Cleaver",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.20647321428571463
+  },
+  {
+    "card_id": 210,
+    "name": "Hinotama Soul",
+    "type": "pyro",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.20814732142857179
+  },
+  {
+    "card_id": 211,
+    "name": "Kaminarikozou",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.20982142857142894
+  },
+  {
+    "card_id": 212,
+    "name": "Meotoko",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2114955357142861
+  },
+  {
+    "card_id": 214,
+    "name": "Kagemusha of the Blue Flame",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.21316964285714324
+  },
+  {
+    "card_id": 222,
+    "name": "Midnight Fiend",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2148437500000004
+  },
+  {
+    "card_id": 227,
+    "name": "Hitodenchak",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.21651785714285754
+  },
+  {
+    "card_id": 229,
+    "name": "Hourglass of Life",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2181919642857147
+  },
+  {
+    "card_id": 232,
+    "name": "Madjinn Gunn",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.21986607142857184
+  },
+  {
+    "card_id": 238,
+    "name": "Yashinoki",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.221540178571429
+  },
+  {
+    "card_id": 240,
+    "name": "The Drdek",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.22321428571428614
+  },
+  {
+    "card_id": 242,
+    "name": "Candle of Fate",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2248883928571433
+  },
+  {
+    "card_id": 245,
+    "name": "Meda Bat",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.22656250000000044
+  },
+  {
+    "card_id": 254,
+    "name": "Embryonic Beast",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2282366071428576
+  },
+  {
+    "card_id": 261,
+    "name": "Wicked Mirror",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.22991071428571475
+  },
+  {
+    "card_id": 265,
+    "name": "The Furious Sea King",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2315848214285719
+  },
+  {
+    "card_id": 267,
+    "name": "Unknown Warrior of Fiend",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.23325892857142905
+  },
+  {
+    "card_id": 268,
+    "name": "Sectarian of Secrets",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2349330357142862
+  },
+  {
+    "card_id": 271,
+    "name": "Megirus Light",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.23660714285714335
+  },
+  {
+    "card_id": 285,
+    "name": "Serpent Marauder",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2382812500000005
+  },
+  {
+    "card_id": 292,
+    "name": "Psychic Kappa",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.23995535714285765
+  },
+  {
+    "card_id": 420,
+    "name": "Cyber-Stein",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2416294642857148
+  },
+  {
+    "card_id": 421,
+    "name": "Cyber Commander",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.24330357142857195
+  },
+  {
+    "card_id": 451,
+    "name": "Kanikabuto",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2449776785714291
+  },
+  {
+    "card_id": 452,
+    "name": "Zarigun",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.24665178571428625
+  },
+  {
+    "card_id": 476,
+    "name": "Ganigumo",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2483258928571434
+  },
+  {
+    "card_id": 486,
+    "name": "Boo Koo",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.25000000000000056
+  },
+  {
+    "card_id": 490,
+    "name": "Needle Ball",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2516741071428577
+  },
+  {
+    "card_id": 492,
+    "name": "Hoshiningen",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.25334821428571486
+  },
+  {
+    "card_id": 506,
+    "name": "Gale Dogra",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.255022321428572
+  },
+  {
+    "card_id": 510,
+    "name": "Laughing Flower",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.25669642857142916
+  },
+  {
+    "card_id": 536,
+    "name": "Mechaleon",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2583705357142863
+  },
+  {
+    "card_id": 537,
+    "name": "Mega Thunderball",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.26004464285714346
+  },
+  {
+    "card_id": 540,
+    "name": "Skelengel",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2617187500000006
+  },
+  {
+    "card_id": 544,
+    "name": "Dharma Cannon",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.26339285714285776
+  },
+  {
+    "card_id": 549,
+    "name": "Frog The Jam",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2650669642857149
+  },
+  {
+    "card_id": 556,
+    "name": "The Wandering Doomed",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.26674107142857206
+  },
+  {
+    "card_id": 579,
+    "name": "Abyss Flower",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2684151785714292
+  },
+  {
+    "card_id": 586,
+    "name": "Greenkappa",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.27008928571428636
+  },
+  {
+    "card_id": 589,
+    "name": "Tentacle Plant",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2717633928571435
+  },
+  {
+    "card_id": 591,
+    "name": "Morphing Jar",
+    "type": "rock",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.27343750000000067
+  },
+  {
+    "card_id": 598,
+    "name": "Little Chimera",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.2751116071428578
+  },
+  {
+    "card_id": 602,
+    "name": "Penguin Soldier",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.27678571428571497
+  },
+  {
+    "card_id": 604,
+    "name": "Obese Marmot of Nefariousness",
+    "type": "beast",
+    "drop_rate": 0.002232142857142857,
+    "cdf": 0.2790178571428578
+  },
+  {
+    "card_id": 606,
+    "name": "Twin Long Rods #2",
+    "type": "aqua",
+    "drop_rate": 0.002232142857142857,
+    "cdf": 0.28125000000000067
+  },
+  {
+    "card_id": 609,
+    "name": "Bladefly",
+    "type": "insect",
+    "drop_rate": 0.002232142857142857,
+    "cdf": 0.2834821428571435
+  },
+  {
+    "card_id": 611,
+    "name": "Hiro's Shadow Scout",
+    "type": "fiend",
+    "drop_rate": 0.002232142857142857,
+    "cdf": 0.28571428571428636
+  },
+  {
+    "card_id": 29,
+    "name": "Mountain Warrior",
+    "type": "beastwarrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2868303571428578
+  },
+  {
+    "card_id": 40,
+    "name": "Dragon Piper",
+    "type": "pyro",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.28794642857142927
+  },
+  {
+    "card_id": 47,
+    "name": "Torike",
+    "type": "beast",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2890625000000007
+  },
+  {
+    "card_id": 48,
+    "name": "Sangan",
+    "type": "fiend",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2901785714285722
+  },
+  {
+    "card_id": 59,
+    "name": "Mammoth Graveyard",
+    "type": "dinosaur",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2912946428571436
+  },
+  {
+    "card_id": 61,
+    "name": "Wolf",
+    "type": "beast",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2924107142857151
+  },
+  {
+    "card_id": 65,
+    "name": "Silver Fang",
+    "type": "beast",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.29352678571428653
+  },
+  {
+    "card_id": 100,
+    "name": "Battle Warrior",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.294642857142858
+  },
+  {
+    "card_id": 108,
+    "name": "Graveyard and the Hand of Invitation",
+    "type": "zombie",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.29575892857142944
+  },
+  {
+    "card_id": 113,
+    "name": "Dark Gray",
+    "type": "beast",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2968750000000009
+  },
+  {
+    "card_id": 114,
+    "name": "White Magical Hat",
+    "type": "spellcaster",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.29799107142857234
+  },
+  {
+    "card_id": 116,
+    "name": "Nightmare Scorpion",
+    "type": "insect",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.2991071428571438
+  },
+  {
+    "card_id": 118,
+    "name": "Supporter in the Shadows",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.30022321428571525
+  },
+  {
+    "card_id": 133,
+    "name": "Charubin the Fire Knight",
+    "type": "pyro",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3013392857142867
+  },
+  {
+    "card_id": 138,
+    "name": "Dragon Statue",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.30245535714285815
+  },
+  {
+    "card_id": 139,
+    "name": "Blue-eyed Silver Zombie",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3041294642857153
+  },
+  {
+    "card_id": 140,
+    "name": "Toad Master",
+    "type": "aqua",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.30524553571428675
+  },
+  {
+    "card_id": 141,
+    "name": "Spiked Snail",
+    "type": "insect",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3063616071428582
+  },
+  {
+    "card_id": 142,
+    "name": "Flame Manipulator",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.30803571428571536
+  },
+  {
+    "card_id": 143,
+    "name": "Necrolancer the Timelord",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3097098214285725
+  },
+  {
+    "card_id": 144,
+    "name": "Djinn the Watcher of the Wind",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.31138392857142966
+  },
+  {
+    "card_id": 155,
+    "name": "Larvas",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3130580357142868
+  },
+  {
+    "card_id": 162,
+    "name": "Tainted Wisdom",
+    "type": "fiend",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.31417410714285826
+  },
+  {
+    "card_id": 169,
+    "name": "Dark King of the Abyss",
+    "type": "fiend",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3152901785714297
+  },
+  {
+    "card_id": 172,
+    "name": "Armaill",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.31640625000000117
+  },
+  {
+    "card_id": 173,
+    "name": "Dark Prisoner",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3180803571428583
+  },
+  {
+    "card_id": 175,
+    "name": "Ancient Brain",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.31975446428571547
+  },
+  {
+    "card_id": 177,
+    "name": "Monsturtle",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3214285714285726
+  },
+  {
+    "card_id": 178,
+    "name": "Claw Reacher",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.32310267857142977
+  },
+  {
+    "card_id": 180,
+    "name": "Arlownay",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3247767857142869
+  },
+  {
+    "card_id": 181,
+    "name": "Dark Shade",
+    "type": "fiend",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.32589285714285837
+  },
+  {
+    "card_id": 188,
+    "name": "Synchar",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3275669642857155
+  },
+  {
+    "card_id": 189,
+    "name": "Fusionist",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3292410714285727
+  },
+  {
+    "card_id": 190,
+    "name": "Akakieisu",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3309151785714298
+  },
+  {
+    "card_id": 199,
+    "name": "Penguin Knight",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.332589285714287
+  },
+  {
+    "card_id": 205,
+    "name": "Dorover",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3342633928571441
+  },
+  {
+    "card_id": 206,
+    "name": "Twin Long Rods #1",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3359375000000013
+  },
+  {
+    "card_id": 215,
+    "name": "Flame Ghost",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3376116071428584
+  },
+  {
+    "card_id": 218,
+    "name": "Two-mouth Darkruler",
+    "type": "dinosaur",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3392857142857156
+  },
+  {
+    "card_id": 219,
+    "name": "Solitude",
+    "type": "beastwarrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.34040178571428703
+  },
+  {
+    "card_id": 224,
+    "name": "Trap Master",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3420758928571442
+  },
+  {
+    "card_id": 226,
+    "name": "Skull Stalker",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.34375000000000133
+  },
+  {
+    "card_id": 228,
+    "name": "Wood Remains",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3454241071428585
+  },
+  {
+    "card_id": 231,
+    "name": "Wood Clown",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.34654017857142994
+  },
+  {
+    "card_id": 239,
+    "name": "Vishwar Randi",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3482142857142871
+  },
+  {
+    "card_id": 243,
+    "name": "Water Element",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.34988839285714424
+  },
+  {
+    "card_id": 244,
+    "name": "Dissolverock",
+    "type": "rock",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3515625000000014
+  },
+  {
+    "card_id": 247,
+    "name": "Root Water",
+    "type": "fish",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.35323660714285854
+  },
+  {
+    "card_id": 250,
+    "name": "Hyo",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.35435267857143
+  },
+  {
+    "card_id": 253,
+    "name": "Angelwitch",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.35602678571428714
+  },
+  {
+    "card_id": 257,
+    "name": "Stone Armadiller",
+    "type": "rock",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3571428571428586
+  },
+  {
+    "card_id": 260,
+    "name": "Lunar Queen Elzaim",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.35881696428571574
+  },
+  {
+    "card_id": 264,
+    "name": "Wing Egg Elf",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3604910714285729
+  },
+  {
+    "card_id": 266,
+    "name": "Princess of Tsurugi",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.36216517857143005
+  },
+  {
+    "card_id": 269,
+    "name": "Versago the Destroyer",
+    "type": "fiend",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3632812500000015
+  },
+  {
+    "card_id": 270,
+    "name": "Wetha",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.36495535714285865
+  },
+  {
+    "card_id": 276,
+    "name": "Ray & Temperature",
+    "type": "fairy",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3660714285714301
+  },
+  {
+    "card_id": 277,
+    "name": "Gorgon Egg",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.36774553571428725
+  },
+  {
+    "card_id": 279,
+    "name": "King Fog",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3694196428571444
+  },
+  {
+    "card_id": 282,
+    "name": "Mystical Sheep #2",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.37109375000000155
+  },
+  {
+    "card_id": 283,
+    "name": "Holograh",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3727678571428587
+  },
+  {
+    "card_id": 295,
+    "name": "Bio Plant",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.37444196428571586
+  },
+  {
+    "card_id": 296,
+    "name": "One-eyed Shield Dragon",
+    "type": "dragon",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3755580357142873
+  },
+  {
+    "card_id": 298,
+    "name": "Wicked Dragon with the Ersatz Head",
+    "type": "dragon",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.37723214285714446
+  },
+  {
+    "card_id": 300,
+    "name": "Kurama",
+    "type": "wingedbeast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3789062500000016
+  },
+  {
+    "card_id": 417,
+    "name": "Blast Juggler",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.38058035714285876
+  },
+  {
+    "card_id": 431,
+    "name": "Ice Water",
+    "type": "aqua",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.3816964285714302
+  },
+  {
+    "card_id": 432,
+    "name": "Waterdragon Fairy",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.38337053571428736
+  },
+  {
+    "card_id": 446,
+    "name": "Aqua Snake",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3850446428571445
+  },
+  {
+    "card_id": 461,
+    "name": "Bolt Penguin",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.38671875000000167
+  },
+  {
+    "card_id": 463,
+    "name": "Electric Snake",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3883928571428588
+  },
+  {
+    "card_id": 477,
+    "name": "Alinsection",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.39006696428571597
+  },
+  {
+    "card_id": 478,
+    "name": "Insect Soldiers of the Sky",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3917410714285731
+  },
+  {
+    "card_id": 481,
+    "name": "Burglar",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.39341517857143027
+  },
+  {
+    "card_id": 489,
+    "name": "Barrel Lily",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3950892857142874
+  },
+  {
+    "card_id": 503,
+    "name": "Turtle Raccoon",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.39676339285714457
+  },
+  {
+    "card_id": 505,
+    "name": "Prisman",
+    "type": "rock",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.3984375000000017
+  },
+  {
+    "card_id": 530,
+    "name": "Eldeen",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.40011160714285887
+  },
+  {
+    "card_id": 534,
+    "name": "Minar",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.401785714285716
+  },
+  {
+    "card_id": 538,
+    "name": "Niwatori",
+    "type": "wingedbeast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4034598214285732
+  },
+  {
+    "card_id": 539,
+    "name": "Corroding Shark",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4051339285714303
+  },
+  {
+    "card_id": 553,
+    "name": "Mushroom Man #2",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.4062500000000018
+  },
+  {
+    "card_id": 559,
+    "name": "Oscillo Hero",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4079241071428589
+  },
+  {
+    "card_id": 568,
+    "name": "Anthrosaurus",
+    "type": "dinosaur",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4095982142857161
+  },
+  {
+    "card_id": 569,
+    "name": "Drooling Lizard",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.41127232142857323
+  },
+  {
+    "card_id": 573,
+    "name": "Little D",
+    "type": "dinosaur",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4129464285714304
+  },
+  {
+    "card_id": 580,
+    "name": "Patrol Robo",
+    "type": "machine",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.41406250000000183
+  },
+  {
+    "card_id": 585,
+    "name": "Mechanical Snail",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.415736607142859
+  },
+  {
+    "card_id": 588,
+    "name": "Living Vase",
+    "type": "plant",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.41685267857143044
+  },
+  {
+    "card_id": 590,
+    "name": "Beaked Snake",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4185267857142876
+  },
+  {
+    "card_id": 592,
+    "name": "Muse-A",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.42020089285714474
+  },
+  {
+    "card_id": 605,
+    "name": "Liquid Beast",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4218750000000019
+  },
+  {
+    "card_id": 610,
+    "name": "Electric Lizard",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.42354910714285904
+  },
+  {
+    "card_id": 612,
+    "name": "Lady of Faith",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4252232142857162
+  },
+  {
+    "card_id": 629,
+    "name": "Armored Rat",
+    "type": "beast",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.42633928571428764
+  },
+  {
+    "card_id": 642,
+    "name": "Mystical Sheep #1",
+    "type": "beast",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.4274553571428591
+  },
+  {
+    "card_id": 646,
+    "name": "Gruesome Goo",
+    "type": "aqua",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.42857142857143055
+  },
+  {
+    "card_id": 3,
+    "name": "Hitotsu-me Giant",
+    "type": "beastwarrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4302455357142877
+  },
+  {
+    "card_id": 10,
+    "name": "Blackland Fire Dragon",
+    "type": "dragon",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.43191964285714485
+  },
+  {
+    "card_id": 23,
+    "name": "The Wicked Worm Beast",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.433593750000002
+  },
+  {
+    "card_id": 25,
+    "name": "Horn Imp",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.43526785714285915
+  },
+  {
+    "card_id": 30,
+    "name": "Zombie Warrior",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4369419642857163
+  },
+  {
+    "card_id": 34,
+    "name": "Saggi the Dark Clown",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.43861607142857345
+  },
+  {
+    "card_id": 53,
+    "name": "Killer Needle",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4402901785714306
+  },
+  {
+    "card_id": 76,
+    "name": "Krokodilus",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.44196428571428775
+  },
+  {
+    "card_id": 80,
+    "name": "Uraby",
+    "type": "dinosaur",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4436383928571449
+  },
+  {
+    "card_id": 109,
+    "name": "Goddess with the Third Eye",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.44531250000000205
+  },
+  {
+    "card_id": 110,
+    "name": "Hero of the East",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4469866071428592
+  },
+  {
+    "card_id": 112,
+    "name": "That Which Feeds on Life",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.44866071428571636
+  },
+  {
+    "card_id": 115,
+    "name": "Kamion Wizard",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4503348214285735
+  },
+  {
+    "card_id": 119,
+    "name": "Trial of Nightmares",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.45200892857143066
+  },
+  {
+    "card_id": 120,
+    "name": "Dream Clown",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4536830357142878
+  },
+  {
+    "card_id": 121,
+    "name": "Sleeping Lion",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.45535714285714496
+  },
+  {
+    "card_id": 132,
+    "name": "The 13th Grave",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4570312500000021
+  },
+  {
+    "card_id": 146,
+    "name": "Temple of Skulls",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.45870535714285926
+  },
+  {
+    "card_id": 153,
+    "name": "Dokuroizo the Grim Reaper",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4603794642857164
+  },
+  {
+    "card_id": 164,
+    "name": "Lord of Zemia",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.46205357142857356
+  },
+  {
+    "card_id": 165,
+    "name": "The Judgement Hand",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4637276785714307
+  },
+  {
+    "card_id": 171,
+    "name": "Big Eye",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.46540178571428786
+  },
+  {
+    "card_id": 196,
+    "name": "Arma Knight",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.467075892857145
+  },
+  {
+    "card_id": 201,
+    "name": "Frenzied Panda",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.46875000000000216
+  },
+  {
+    "card_id": 220,
+    "name": "Masked Sorcerer",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4704241071428593
+  },
+  {
+    "card_id": 221,
+    "name": "Kumootoko",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.47209821428571647
+  },
+  {
+    "card_id": 225,
+    "name": "Fiend Sword",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4737723214285736
+  },
+  {
+    "card_id": 233,
+    "name": "Dark Titan of Terror",
+    "type": "fiend",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.47488839285714507
+  },
+  {
+    "card_id": 234,
+    "name": "Beautiful Headhuntress",
+    "type": "warrior",
+    "drop_rate": 0.0011160714285714285,
+    "cdf": 0.4760044642857165
+  },
+  {
+    "card_id": 236,
+    "name": "Guardian of the Labyrinth",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4776785714285737
+  },
+  {
+    "card_id": 241,
+    "name": "Dark Assailant",
+    "type": "zombie",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4793526785714308
+  },
+  {
+    "card_id": 246,
+    "name": "One Who Hunts Souls",
+    "type": "beastwarrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.481026785714288
+  },
+  {
+    "card_id": 248,
+    "name": "Master & Expert",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4827008928571451
+  },
+  {
+    "card_id": 251,
+    "name": "Enchanting Mermaid",
+    "type": "fish",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4843750000000023
+  },
+  {
+    "card_id": 256,
+    "name": "Dimensional Warrior",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4860491071428594
+  },
+  {
+    "card_id": 258,
+    "name": "Beastking of the Swamps",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4877232142857166
+  },
+  {
+    "card_id": 259,
+    "name": "Ancient Sorcerer",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.48939732142857373
+  },
+  {
+    "card_id": 262,
+    "name": "The Little Swordsman of Aile",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4910714285714309
+  },
+  {
+    "card_id": 263,
+    "name": "Rock Ogre Grotto #2",
+    "type": "rock",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.49274553571428803
+  },
+  {
+    "card_id": 272,
+    "name": "Mavelus",
+    "type": "wingedbeast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4944196428571452
+  },
+  {
+    "card_id": 273,
+    "name": "Ancient Tree of Enlightenment",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.49609375000000233
+  },
+  {
+    "card_id": 274,
+    "name": "Green Phantom King",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.4977678571428595
+  },
+  {
+    "card_id": 280,
+    "name": "Protector of the Throne",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.49944196428571663
+  },
+  {
+    "card_id": 290,
+    "name": "Moon Envoy",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5011160714285737
+  },
+  {
+    "card_id": 291,
+    "name": "Fireyarou",
+    "type": "pyro",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5027901785714308
+  },
+  {
+    "card_id": 293,
+    "name": "Masaki the Legendary Swordsman",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5044642857142879
+  },
+  {
+    "card_id": 294,
+    "name": "Dragoness the Wicked Knight",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.506138392857145
+  },
+  {
+    "card_id": 381,
+    "name": "Toon Alligator",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5078125000000021
+  },
+  {
+    "card_id": 406,
+    "name": "Yaiba Robo",
+    "type": "thunder",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5094866071428592
+  },
+  {
+    "card_id": 414,
+    "name": "Shovel Crusher",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5111607142857163
+  },
+  {
+    "card_id": 430,
+    "name": "Water Magician",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5128348214285734
+  },
+  {
+    "card_id": 435,
+    "name": "Water Girl",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5145089285714305
+  },
+  {
+    "card_id": 445,
+    "name": "Guardian of the Sea",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5161830357142876
+  },
+  {
+    "card_id": 450,
+    "name": "Kappa Avenger",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5178571428571447
+  },
+  {
+    "card_id": 455,
+    "name": "Barrel Rock",
+    "type": "rock",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5195312500000018
+  },
+  {
+    "card_id": 457,
+    "name": "Stone Ghost",
+    "type": "rock",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5212053571428589
+  },
+  {
+    "card_id": 474,
+    "name": "Sea Kamen",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.522879464285716
+  },
+  {
+    "card_id": 480,
+    "name": "Kuwagata a",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5245535714285731
+  },
+  {
+    "card_id": 496,
+    "name": "Wilmee",
+    "type": "beast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5262276785714302
+  },
+  {
+    "card_id": 502,
+    "name": "D. Human",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5279017857142873
+  },
+  {
+    "card_id": 514,
+    "name": "Brave Scizzar",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5295758928571443
+  },
+  {
+    "card_id": 543,
+    "name": "Tongyo",
+    "type": "fish",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5312500000000014
+  },
+  {
+    "card_id": 546,
+    "name": "Wow Warrior",
+    "type": "fish",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5329241071428585
+  },
+  {
+    "card_id": 550,
+    "name": "Behegon",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5345982142857156
+  },
+  {
+    "card_id": 552,
+    "name": "Winged Dragon #2",
+    "type": "wingedbeast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5362723214285727
+  },
+  {
+    "card_id": 560,
+    "name": "Invader from Another Dimension",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5379464285714298
+  },
+  {
+    "card_id": 561,
+    "name": "Lesser Dragon",
+    "type": "dragon",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5396205357142869
+  },
+  {
+    "card_id": 566,
+    "name": "Yormungarde",
+    "type": "reptile",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.541294642857144
+  },
+  {
+    "card_id": 567,
+    "name": "Darkworld Thorns",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5429687500000011
+  },
+  {
+    "card_id": 570,
+    "name": "Trakadon",
+    "type": "dinosaur",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5446428571428582
+  },
+  {
+    "card_id": 574,
+    "name": "Witch of the Black Forest",
+    "type": "spellcaster",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5463169642857153
+  },
+  {
+    "card_id": 576,
+    "name": "Giant Scorpion of the Tundra",
+    "type": "insect",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5479910714285724
+  },
+  {
+    "card_id": 581,
+    "name": "Takuhee",
+    "type": "wingedbeast",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5496651785714295
+  },
+  {
+    "card_id": 583,
+    "name": "Weather Report",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5513392857142866
+  },
+  {
+    "card_id": 584,
+    "name": "Binding Chain",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5530133928571437
+  },
+  {
+    "card_id": 599,
+    "name": "Violent Rain",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5546875000000008
+  },
+  {
+    "card_id": 600,
+    "name": "Key Mace #2",
+    "type": "fiend",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5563616071428579
+  },
+  {
+    "card_id": 601,
+    "name": "Tenderness",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.558035714285715
+  },
+  {
+    "card_id": 608,
+    "name": "Shining Friendship",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5597098214285721
+  },
+  {
+    "card_id": 615,
+    "name": "Armored Starfish",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5613839285714292
+  },
+  {
+    "card_id": 616,
+    "name": "Hourglass of Courage",
+    "type": "fairy",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5630580357142863
+  },
+  {
+    "card_id": 620,
+    "name": "Snakeyashi",
+    "type": "plant",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5647321428571433
+  },
+  {
+    "card_id": 634,
+    "name": "Night Lizard",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5664062500000004
+  },
+  {
+    "card_id": 643,
+    "name": "Disk Magician",
+    "type": "machine",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5680803571428575
+  },
+  {
+    "card_id": 647,
+    "name": "Hyosube",
+    "type": "aqua",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5697544642857146
+  },
+  {
+    "card_id": 649,
+    "name": "Hibikime",
+    "type": "warrior",
+    "drop_rate": 0.0016741071428571428,
+    "cdf": 0.5714285714285717
+  },
+  {
+    "card_id": 336,
+    "name": "Dark Hole",
+    "type": "magic",
+    "drop_rate": 0.07142857142857142,
+    "cdf": 0.6428571428571431
+  },
+  {
+    "card_id": 337,
+    "name": "Raigeki",
+    "type": "magic",
+    "drop_rate": 0.07142857142857142,
+    "cdf": 0.7142857142857145
+  },
+  {
+    "card_id": 330,
+    "name": "Forest",
+    "type": "field",
+    "drop_rate": 0.023995535714285716,
+    "cdf": 0.7382812500000002
+  },
+  {
+    "card_id": 331,
+    "name": "Wasteland",
+    "type": "field",
+    "drop_rate": 0.023995535714285716,
+    "cdf": 0.7622767857142859
+  },
+  {
+    "card_id": 332,
+    "name": "Mountain",
+    "type": "field",
+    "drop_rate": 0.023995535714285716,
+    "cdf": 0.7862723214285716
+  },
+  {
+    "card_id": 333,
+    "name": "Sogen",
+    "type": "field",
+    "drop_rate": 0.023995535714285716,
+    "cdf": 0.8102678571428573
+  },
+  {
+    "card_id": 334,
+    "name": "Umi",
+    "type": "field",
+    "drop_rate": 0.0234375,
+    "cdf": 0.8337053571428573
+  },
+  {
+    "card_id": 335,
+    "name": "Yami",
+    "type": "field",
+    "drop_rate": 0.0234375,
+    "cdf": 0.8571428571428573
+  },
+  {
+    "card_id": 301,
+    "name": "Legendary Sword",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8621651785714287
+  },
+  {
+    "card_id": 302,
+    "name": "Sword of Dark Destruction",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8671875000000001
+  },
+  {
+    "card_id": 303,
+    "name": "Dark Energy",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8722098214285715
+  },
+  {
+    "card_id": 304,
+    "name": "Axe of Despair",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8772321428571429
+  },
+  {
+    "card_id": 305,
+    "name": "Laser Cannon Armor",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8822544642857143
+  },
+  {
+    "card_id": 306,
+    "name": "Insect Armor with Laser Cannon",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8872767857142857
+  },
+  {
+    "card_id": 307,
+    "name": "Elf's Light",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8922991071428571
+  },
+  {
+    "card_id": 308,
+    "name": "Beast Fangs",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.8973214285714285
+  },
+  {
+    "card_id": 309,
+    "name": "Steel Shell",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9023437499999999
+  },
+  {
+    "card_id": 310,
+    "name": "Vile Germs",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9073660714285713
+  },
+  {
+    "card_id": 311,
+    "name": "Black Pendant",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9123883928571427
+  },
+  {
+    "card_id": 312,
+    "name": "Silver Bow and Arrow",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9174107142857141
+  },
+  {
+    "card_id": 313,
+    "name": "Horn of Light",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9224330357142855
+  },
+  {
+    "card_id": 314,
+    "name": "Horn of the Unicorn",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9274553571428569
+  },
+  {
+    "card_id": 315,
+    "name": "Dragon Treasure",
+    "type": "equip",
+    "drop_rate": 0.005580357142857143,
+    "cdf": 0.933035714285714
+  },
+  {
+    "card_id": 316,
+    "name": "Electro-whip",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9380580357142854
+  },
+  {
+    "card_id": 317,
+    "name": "Cyber Shield",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9430803571428568
+  },
+  {
+    "card_id": 319,
+    "name": "Mystical Moon",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9481026785714282
+  },
+  {
+    "card_id": 321,
+    "name": "Malevolent Nuzzler",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9531249999999996
+  },
+  {
+    "card_id": 322,
+    "name": "Violet Crystal",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.958147321428571
+  },
+  {
+    "card_id": 323,
+    "name": "Book of Secret Arts",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9631696428571423
+  },
+  {
+    "card_id": 324,
+    "name": "Invigoration",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9681919642857137
+  },
+  {
+    "card_id": 326,
+    "name": "Raise Body Heat",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9732142857142851
+  },
+  {
+    "card_id": 327,
+    "name": "Follow Wind",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9782366071428565
+  },
+  {
+    "card_id": 328,
+    "name": "Power of Kaishin",
+    "type": "equip",
+    "drop_rate": 0.005022321428571429,
+    "cdf": 0.9832589285714279
+  },
+  {
+    "card_id": 652,
+    "name": "Magical Labyrinth",
+    "type": "equip",
+    "drop_rate": 0.005580357142857143,
+    "cdf": 0.988839285714285
+  },
+  {
+    "card_id": 654,
+    "name": "Salamandra",
+    "type": "equip",
+    "drop_rate": 0.005580357142857143,
+    "cdf": 0.9944196428571421
+  },
+  {
+    "card_id": 659,
+    "name": "Winged Trumpeter",
+    "type": "equip",
+    "drop_rate": 0.005580357142857143,
+    "cdf": 0.9999999999999992
+  }
+]

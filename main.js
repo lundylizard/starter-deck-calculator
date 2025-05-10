@@ -72,87 +72,12 @@ function resolveCardName(input) {
 function resolveRequirements(rawReqs) {
     return rawReqs.map(r => ({
         kind: r.kind,
-        alts: r.altsRaw.map(v => r.kind === 'card' ? resolveCardName(v) : typeNameToId[v]).filter(Boolean),
+        alts: r.altsRaw
+            .map(v => r.kind === 'card' ? resolveCardName(v) : typeNameToId[v])
+            .filter(Boolean),
         min: r.min,
         max: r.max
     }));
-}
-
-function validateRequirement(deck, req) {
-    const cardCount = {}, typeCount = {};
-
-    deck.forEach(cid => {
-        cardCount[cid] = (cardCount[cid] || 0) + 1;
-        const typeId = typeNameToId[cardsData.find(c => c.id === cid).type];
-        typeCount[typeId] = (typeCount[typeId] || 0) + 1;
-    });
-
-    for (const r of req) {
-        const total = r.alts.reduce((sum, id) => sum + (r.kind === 'card' ? cardCount[id] || 0 : typeCount[id] || 0), 0);
-        if (total < r.min || (r.max > r.min && total > r.max)) return false;
-    }
-
-    return true;
-}
-
-function runSimulationMultiThreaded(reqs, trials, numThreads, onDone) {
-    const trialsPerThread = Math.floor(trials / numThreads);
-    const remainder = trials % numThreads;
-    let completed = 0;
-    let totalHits = 0;
-
-    for (let i = 0; i < numThreads; i++) {
-        const worker = new Worker('simWorker.js');
-        const threadTrials = i === 0 ? trialsPerThread + remainder : trialsPerThread;
-
-        worker.postMessage({
-            cardsData,
-            requirements: reqs,
-            trials: threadTrials,
-        });
-
-        worker.onmessage = (e) => {
-            totalHits += e.data.hits;
-            completed++;
-            worker.terminate();
-
-            if (completed === numThreads) {
-                const pct = totalHits / trials * 100;
-                onDone(pct);
-            }
-        };
-    }
-}
-
-function sampleDeck(size, cids, cdf) {
-    return Array.from({ length: size }, () => {
-        const r = Math.random();
-        let lo = 0, hi = cdf.length - 1;
-        while (lo < hi) {
-            const m = (lo + hi) >>> 1;
-            if (cdf[m] < r) lo = m + 1;
-            else hi = m;
-        }
-        return cids[lo];
-    });
-}
-
-function injectRequirements(deck) {
-    const deckSize = deck.length;
-    const used = new Set();
-
-    function injectCard(cardPool) {
-        if (!deck.some(cid => cardPool.includes(cid))) {
-            let pos;
-            do { pos = Math.floor(Math.random() * deckSize); } while (used.has(pos));
-            deck[pos] = cardPool[Math.floor(Math.random() * cardPool.length)];
-            used.add(pos);
-        }
-    }
-
-    injectCard(defaultCardAlternatives);
-    injectCard(equipCardIds);
-    injectCard(magicCardIds);
 }
 
 function createRequirementGroup(initial = { kind: 'card', altsRaw: [''], min: 1, max: 1 }) {
@@ -234,14 +159,26 @@ function createRequirementGroup(initial = { kind: 'card', altsRaw: [''], min: 1,
 }
 
 function getRawReqs() {
-    return Array.from(document.querySelectorAll('.requirement-group')).map(g => {
-        return {
-            kind: g.querySelector('.req-kind').value,
-            altsRaw: Array.from(g.querySelectorAll('.alt-value')).map(el => el.value.trim()).filter(Boolean),
-            min: parseInt(g.querySelector('.req-min').value, 10) || 0,
-            max: parseInt(g.querySelector('.req-max').value, 10) || 0,
-        };
-    });
+    return Array.from(document.querySelectorAll('.requirement-group')).map(g => ({
+        kind: g.querySelector('.req-kind').value,
+        altsRaw: Array.from(g.querySelectorAll('.alt-value')).map(el => el.value.trim()).filter(Boolean),
+        min: parseInt(g.querySelector('.req-min').value, 10) || 0,
+        max: parseInt(g.querySelector('.req-max').value, 10) || 0,
+    }));
+}
+
+function buildSummary(reqs) {
+    const itemsList = reqs.map(r => {
+        const kind = r.kind;
+        const alts = r.altsRaw.map(v =>
+            kind === 'card'
+                ? cardsData.find(c => c.id === resolveCardName(v))?.name || v
+                : v
+        ).join(' or ');
+        const label = r.min === r.max ? `${r.min}` : `between ${r.min} and ${r.max}`;
+        return `<li>${label} of <em>${alts}</em></li>`;
+    }).join('');
+    return `<strong>The deck should have:</strong><ul>${itemsList}</ul>`;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -256,7 +193,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     function updateLagWarning() {
         lagWarning.classList.toggle('hidden', (parseInt(trialInput.value, 10) || 0) <= 10000000);
     }
-
     trialInput.addEventListener('input', updateLagWarning);
     updateLagWarning();
 
@@ -269,36 +205,43 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    addBtn.addEventListener('click', () => {
-        reqList.appendChild(createRequirementGroup());
-    });
+    addBtn.addEventListener('click', () => reqList.appendChild(createRequirementGroup()));
+
+    const poolSize = navigator.hardwareConcurrency || 4;
+    const workerPool = [];
+    for (let i = 0; i < poolSize; i++) {
+        workerPool.push(new Worker('simWorker.js'));
+    }
+
+    function runSimulationMultiThreaded(reqs, trials, numThreads, onDone) {
+        const per = Math.floor(trials / numThreads);
+        const remainder = trials % numThreads;
+        let completed = 0, totalHits = 0;
+
+        workerPool.forEach((worker, i) => {
+            const t = per + (i === 0 ? remainder : 0);
+            worker.onmessage = e => {
+                totalHits += e.data.hits;
+                if (++completed === numThreads) {
+                    onDone(totalHits / trials * 100);
+                }
+            };
+            worker.postMessage({ cardsData, requirements: reqs, trials: t });
+        });
+    }
 
     runBtn.addEventListener('click', () => {
-        const trials = parseInt(trialInput.value, 10) || 1_000_000;
+        const trials = parseInt(trialInput.value, 10) || 1000000;
         const rawReqs = getRawReqs();
-
         setCookie('deckReqs', JSON.stringify(rawReqs));
         const resolvedReqs = resolveRequirements(rawReqs);
 
         output.textContent = 'Running…';
-        runSimulationMultiThreaded(resolvedReqs, trials, navigator.hardwareConcurrency || 4, (pct) => {
+        runSimulationMultiThreaded(resolvedReqs, trials, workerPool.length, (pct) => {
             const oneIn = pct > 0 ? Math.round(100 / pct) : '∞';
             output.textContent = `Probability: ${pct.toFixed(4)}% (1 in ${oneIn})`;
-
             summary.classList.remove('hidden');
             summary.innerHTML = buildSummary(rawReqs);
         });
     });
-
-    function buildSummary(reqs) {
-        const itemsList = reqs.map(r => {
-            const kind = r.kind;
-            const alts = r.altsRaw.map(v =>
-                kind === 'card' ? cardsData.find(c => c.id === resolveCardName(v))?.name || v : v
-            ).join(' or ');
-            const label = r.min === r.max ? `${r.min}` : `between ${r.min} and ${r.max}`;
-            return `<li>${label} of <em>${alts}</em></li>`;
-        }).join('');
-        return `<strong>The deck should have:</strong><ul>${itemsList}</ul>`;
-    }
 });

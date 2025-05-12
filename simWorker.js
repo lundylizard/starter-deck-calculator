@@ -1,47 +1,73 @@
-const typeNameToId = {
-    dragon: 1, spellcaster: 2, zombie: 3, warrior: 4,
-    beastwarrior: 5, beast: 6, wingedbeast: 7, fiend: 8,
-    fairy: 9, insect: 10, dinosaur: 11, reptile: 12,
-    fish: 13, seaserpent: 14, machine: 15, thunder: 16,
-    aqua: 17, pyro: 18, rock: 19, plant: 20,
-    magic: 21, field: 22, trap: 23, ritual: 24,
-    equip: 25,
-};
-
 const MAX_COPIES = 3;
-let aliasTable, cids, idToType, built = false;
+let starterPools = [];
+let idToType = new Uint8Array(3000);
+const cardDrawCount = new Uint32Array(3000);
+let poolAliases = [];
+let built = false;
 
 self.onmessage = function (e) {
-    const { cardsData, requirements, trials } = e.data;
+    const { trials, requirements, starterPools: pools } = e.data;
+    starterPools = pools;
 
     if (!built) {
-        cids = cardsData.map(c => c.id);
-        const maxId = Math.max(...cids);
-        idToType = new Uint8Array(maxId + 1);
-        cardsData.forEach(c => {
-            idToType[c.id] = typeNameToId[c.type];
-        });
+        poolAliases = pools.map(pool => ({
+            sample_size: pool.sample_size,
+            alias: createAliasTable(pool.cards)
+        }));
 
-        const pdf = new Float64Array(cardsData.length);
-        pdf[0] = cardsData[0].cdf;
-        for (let i = 1; i < cardsData.length; i++) {
-            pdf[i] = cardsData[i].cdf - cardsData[i - 1].cdf;
+        let maxId = 0;
+        for (const pool of pools) {
+            for (const card of pool.cards) {
+                if (card.card_id > maxId) maxId = card.card_id;
+            }
         }
 
-        aliasTable = buildAlias(pdf);
+        idToType = new Uint8Array(maxId + 1);
+        for (const pool of pools) {
+            for (const card of pool.cards) {
+                idToType[card.card_id] = card.type_id || 0;
+            }
+        }
+
         built = true;
     }
 
+    const cardToReqsMap = buildCardToReqsMap(requirements);
+    cardDrawCount.fill(0);
     let hits = 0;
-    for (let i = 0; i < trials; i++) {
-        const deck = sampleDeck(trials /*ignored*/, cids, aliasTable);
-        if (validate(deck, requirements)) hits++;
+
+    const deck = new Uint16Array(40);
+    const counts = new Uint8Array(3000);
+
+    for (let t = 0; t < trials; t++) {
+        let index = 0;
+        counts.fill(0);
+
+        for (const { alias, sample_size } of poolAliases) {
+            let drawn = 0;
+            while (drawn < sample_size) {
+                const cardId = sampleFromAlias(alias);
+                if (counts[cardId] < MAX_COPIES) {
+                    counts[cardId]++;
+                    cardDrawCount[cardId]++;
+                    deck[index++] = cardId;
+                    drawn++;
+                }
+            }
+        }
+
+        if (validate(deck, index, requirements, cardToReqsMap)) hits++;
     }
 
-    self.postMessage({ hits });
+    self.postMessage({
+        hits,
+        cardDrawCount: Array.from(cardDrawCount)
+    });
 };
 
-function buildAlias(pdf) {
+function createAliasTable(cards) {
+    const total = 2048;
+    const pdf = cards.map(c => c.weight / total);
     const N = pdf.length;
     const prob = new Float64Array(N);
     const alias = new Uint16Array(N);
@@ -57,49 +83,65 @@ function buildAlias(pdf) {
         scaled[g] = (scaled[g] + scaled[l]) - 1;
         (scaled[g] < 1 ? small : large).push(g);
     }
+
     large.forEach(i => prob[i] = 1);
     small.forEach(i => prob[i] = 1);
 
-    return { prob, alias };
+    return { prob, alias, cards };
 }
 
-function sampleSlot(aliasTable, cids) {
+function sampleFromAlias(aliasTable) {
     const i = (Math.random() * aliasTable.prob.length) | 0;
     return Math.random() < aliasTable.prob[i]
-        ? cids[i]
-        : cids[aliasTable.alias[i]];
+        ? aliasTable.cards[i].card_id
+        : aliasTable.cards[aliasTable.alias[i]].card_id;
 }
 
-function sampleDeck(_, cids, aliasTable) {
-    const deck = [];
-    const counts = new Uint8Array(idToType.length);
+function buildCardToReqsMap(requirements) {
+    const map = new Map();
 
-    while (deck.length < 40) {
-        const pick = sampleSlot(aliasTable, cids);
-        if (++counts[pick] <= MAX_COPIES) {
-            deck.push(pick);
-        } else {
-            counts[pick]--;
+    for (let i = 0; i < requirements.length; i++) {
+        const r = requirements[i];
+        if (r.kind !== 'card') continue;
+
+        for (const id of r.alts) {
+            if (!map.has(id)) map.set(id, []);
+            map.get(id).push(i);
         }
     }
-    return deck;
+
+    return map;
 }
 
-function validate(deck, requirements) {
-    const cardCount = new Uint8Array(idToType.length);
-    const typeCount = new Uint8Array(26);
+function validate(deck, size, requirements, cardToReqsMap) {
+    if (!requirements || !Array.isArray(requirements) || requirements.length === 0) return true;
 
-    for (let cid of deck) {
+    const cardCount = new Uint16Array(3000);
+    const typeCount = new Uint16Array(30);
+    const reqSums = new Uint16Array(requirements.length);
+
+    for (let i = 0; i < size; i++) {
+        const cid = deck[i];
         cardCount[cid]++;
-        typeCount[idToType[cid]]++;
+        const typeId = idToType[cid];
+        if (typeId) typeCount[typeId]++;
+
+        const affectedReqs = cardToReqsMap.get(cid);
+        if (affectedReqs) {
+            for (const reqIndex of affectedReqs) {
+                reqSums[reqIndex]++;
+            }
+        }
     }
 
-    for (let r of requirements) {
-        let total = 0;
-        for (let id of r.alts) {
-            total += (r.kind === 'card' ? cardCount[id] : typeCount[id]);
-        }
+    for (let i = 0; i < requirements.length; i++) {
+        const r = requirements[i];
+        let total = r.kind === 'card'
+            ? reqSums[i]
+            : r.alts.reduce((sum, typeId) => sum + typeCount[typeId], 0);
+
         if (total < r.min || total > r.max) return false;
     }
+
     return true;
 }

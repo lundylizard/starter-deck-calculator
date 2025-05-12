@@ -5,17 +5,11 @@ const typeNameToId = {
     fish: 13, seaserpent: 14, machine: 15, thunder: 16,
     aqua: 17, pyro: 18, rock: 19, plant: 20,
     magic: 21, field: 22, trap: 23, ritual: 24,
-    equip: 25,
+    equip: 25
 };
 
-const idToTypeName = Object.fromEntries(
-    Object.entries(typeNameToId).map(([k, v]) => [v, k])
-);
-
-let cardsData = [];
-let nameToId = {}, nameToIdNormalized = {};
-let typesList = Object.keys(typeNameToId);
-let defaultCardAlternatives = [], equipCardIds = [], magicCardIds = [];
+let cardsData = [], nameToId = {}, nameToIdNormalized = {};
+let starterPools = [];
 
 function setCookie(name, value, days = 365) {
     const expires = new Date(Date.now() + days * 864e5).toUTCString();
@@ -30,22 +24,26 @@ function getCookie(name) {
 }
 
 async function loadCardData() {
-    const res = await fetch('assets/cards_data.json');
+    const res = await fetch('assets/pools.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    starterPools = await res.json();
 
-    const data = await res.json();
-    cardsData = data.map(c => ({ id: c.card_id, name: c.name, type: c.type, cdf: c.cdf }));
+    const cardMap = new Map();
+    for (const pool of starterPools) {
+        for (const card of pool.cards) {
+            if (!cardMap.has(card.card_id)) {
+                cardMap.set(card.card_id, {
+                    id: card.card_id,
+                    name: card.card_name,
+                    type: card.type_id || null
+                });
+            }
+        }
+    }
 
+    cardsData = Array.from(cardMap.values());
     nameToId = Object.fromEntries(cardsData.map(c => [c.name, c.id]));
     nameToIdNormalized = Object.fromEntries(cardsData.map(c => [c.name.toLowerCase(), c.id]));
-
-    defaultCardAlternatives = [
-        nameToIdNormalized['raigeki'],
-        nameToIdNormalized['dark hole']
-    ].filter(Boolean);
-
-    equipCardIds = cardsData.filter(c => c.type === 'equip').map(c => c.id);
-    magicCardIds = cardsData.filter(c => c.type === 'magic').map(c => c.id);
 
     populateCardDatalist();
 }
@@ -53,7 +51,7 @@ async function loadCardData() {
 function populateCardDatalist() {
     const dl = document.getElementById('cardList');
     dl.innerHTML = '';
-    cardsData.slice().sort((a, b) => b.cdf - a.cdf).forEach(c => {
+    cardsData.slice().sort((a, b) => a.name.localeCompare(b.name)).forEach(c => {
         const opt = document.createElement('option');
         opt.value = c.name;
         dl.appendChild(opt);
@@ -64,7 +62,6 @@ function resolveCardName(input) {
     const key = input.trim().toLowerCase();
     if (!key) return null;
     if (nameToIdNormalized[key]) return nameToIdNormalized[key];
-
     const matches = cardsData.filter(c => c.name.toLowerCase().startsWith(key));
     return matches.length === 1 ? matches[0].id : null;
 }
@@ -72,9 +69,7 @@ function resolveCardName(input) {
 function resolveRequirements(rawReqs) {
     return rawReqs.map(r => ({
         kind: r.kind,
-        alts: r.altsRaw
-            .map(v => r.kind === 'card' ? resolveCardName(v) : typeNameToId[v])
-            .filter(Boolean),
+        alts: r.altsRaw.map(v => r.kind === 'card' ? resolveCardName(v) : typeNameToId[v]).filter(Boolean),
         min: r.min,
         max: r.max
     }));
@@ -116,7 +111,8 @@ function createRequirementGroup(initial = { kind: 'card', altsRaw: [''], min: 1,
           <button class="remove-alt button-like">×</button>
         `;
         } else {
-            const options = typesList.map(t => `<option value="${t}">${t[0].toUpperCase() + t.slice(1)}</option>`).join('');
+            const options = Object.keys(typeNameToId).map(t =>
+                `<option value="${t}">${t[0].toUpperCase() + t.slice(1)}</option>`).join('');
             row.innerHTML = `
           <select class="alt-value">${options}</select>
           <button class="remove-alt button-like">×</button>
@@ -167,21 +163,9 @@ function getRawReqs() {
     }));
 }
 
-function buildSummary(reqs) {
-    const itemsList = reqs.map(r => {
-        const kind = r.kind;
-        const alts = r.altsRaw.map(v =>
-            kind === 'card'
-                ? cardsData.find(c => c.id === resolveCardName(v))?.name || v
-                : v
-        ).join(' or ');
-        const label = r.min === r.max ? `${r.min}` : `between ${r.min} and ${r.max}`;
-        return `<li>${label} of <em>${alts}</em></li>`;
-    }).join('');
-    return `<strong>The deck should have:</strong><ul>${itemsList}</ul>`;
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
+    console.log("perfStats div:", document.getElementById('perfStats'));
+
     const addBtn = document.getElementById('addRequirement');
     const runBtn = document.getElementById('runSim');
     const trialInput = document.getElementById('trialCount');
@@ -208,25 +192,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     addBtn.addEventListener('click', () => reqList.appendChild(createRequirementGroup()));
 
     const poolSize = navigator.hardwareConcurrency || 4;
-    const workerPool = [];
-    for (let i = 0; i < poolSize; i++) {
-        workerPool.push(new Worker('simWorker.js'));
-    }
+    const workerPool = Array.from({ length: poolSize }, () => new Worker('simWorker.js'));
 
     function runSimulationMultiThreaded(reqs, trials, numThreads, onDone) {
         const per = Math.floor(trials / numThreads);
         const remainder = trials % numThreads;
         let completed = 0, totalHits = 0;
-
+        let totalCardCount = new Uint32Array(3000);
+    
+        const start = performance.now(); // ⏱️ Start timing
+    
         workerPool.forEach((worker, i) => {
             const t = per + (i === 0 ? remainder : 0);
             worker.onmessage = e => {
                 totalHits += e.data.hits;
+                const countArray = e.data.cardDrawCount;
+                for (let j = 0; j < countArray.length; j++) {
+                    totalCardCount[j] += countArray[j];
+                }
+    
                 if (++completed === numThreads) {
-                    onDone(totalHits / trials * 100);
+                    const end = performance.now(); // ⏱️ End timing
+                    const elapsed = (end - start) / 1000;
+                    const trialsPerSec = (trials / elapsed).toFixed(1);
+    
+                    console.log(`Simulated ${trials} decks in ${elapsed.toFixed(2)}s (${trialsPerSec} decks/sec)`);
+    
+                    const pct = totalHits / trials * 100;
+                    onDone(pct, totalCardCount, trials, trialsPerSec, elapsed);
                 }
             };
-            worker.postMessage({ cardsData, requirements: reqs, trials: t });
+    
+            worker.postMessage({ starterPools, requirements: reqs, trials: t });
         });
     }
 
@@ -237,11 +234,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         const resolvedReqs = resolveRequirements(rawReqs);
 
         output.textContent = 'Running…';
-        runSimulationMultiThreaded(resolvedReqs, trials, workerPool.length, (pct) => {
+        runSimulationMultiThreaded(resolvedReqs, trials, workerPool.length, (pct, cardDrawCount, totalTrials, rate, elapsed) => {
             const oneIn = pct > 0 ? Math.round(100 / pct) : '∞';
             output.textContent = `Probability: ${pct.toFixed(4)}% (1 in ${oneIn})`;
+        
+            const perfStats = document.getElementById('perfStats');
+            perfStats.textContent = `${rate} decks/sec (took ${elapsed.toFixed(2)} sec)`;
+        
             summary.classList.remove('hidden');
-            summary.innerHTML = buildSummary(rawReqs);
+            summary.innerHTML = buildSummary(rawReqs, cardDrawCount, totalTrials);
         });
+        
     });
+
+    function buildSummary(reqs) {
+        const itemsList = reqs.map(r => {
+            const kind = r.kind;
+            const alts = r.altsRaw.map(v =>
+                kind === 'card' ? cardsData.find(c => c.id === resolveCardName(v))?.name || v : v
+            ).join(' or ');
+            const label = r.min === r.max ? `${r.min}` : `between ${r.min} and ${r.max}`;
+            return `<li>${label} of <em>${alts}</em></li>`;
+        }).join('');
+        return `<strong>The deck should have:</strong><ul>${itemsList}</ul>`;
+    }
 });
